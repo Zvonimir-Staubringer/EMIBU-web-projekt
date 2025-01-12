@@ -1,57 +1,291 @@
-/*body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-nav {
-    margin-top: 20px;
-}
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-}
-nav a:hover {
-    color: #007BFF;
-}*/
-
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: poppins;
 }
 
 body {
-    background: #ecf4fb;
+    background: #f5ece5;
+}
+
+.container {
+    background: #f5ece5;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 70px;
+    margin: 20px 20px 20px 15px;
+}
+
+.aboutHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.container nav {
+    width: 100%;
+    height: 60px;
+    margin: 0px 0px 0px;
+    background-color: #45523e;
+    font-size: 20px;
+}
+
+.container nav a {
+    color: #f5ece5;
+    text-decoration: underline;
+    padding: 10px 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container nav a:hover {
+    color: #ad5d50;
+    transform: scale(1.05);
+}
+
+.container nav a.navHere {
+    color: #f5ece5;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container nav a.navHere:hover {
+    color: #f5ece5;
+    transform: none;
+    cursor: default;
+}
+
+.navHere:hover {
+    transform: none;
+}
+
+.container nav a.navHereOne {
+    color: #f5ece5;
+    font-size: 35px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container nav a.navHereOne:hover {
+    color: #f5ece5;
+    transform: none;
+    cursor: default;
+}
+
+.container p {
+    font-size: 40px;
+    margin: 20px 30px;
+    padding-left: 10px;
+    color: #010101;
+}
+
+.homeBackground {
+    background-image: url('../Images/Svasta1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: saturation;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBackground h1 {
+    background-color: #FEFCD0;
+    font-size: 100px;
+    color: #010101;
+    opacity: 1;
+    z-index: 2;
+    box-shadow: #010101 4px 4px 10px;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #45523e;
+    border-width: 3px;
+    border-style: ridge;
+}
+
+.homeAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 30px;
+}
+
+.exampleImage {
+    transition: ease-in-out 1s;
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 75px rgb(69, 82, 62, 0.6);
+}
+
+.exampleImage:hover {
+    transform: scale(1.4) rotate(-5deg);
+    border-color: #ad5d50;
+}
+
+.button {
+    background-color: #45523e;
+    color: rgb(245, 236, 229);
+    padding: 10px 20px;
+    font-size: 40px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    box-shadow: #45523e 4px 4px 10px;
+}
+
+.buttonAbout {
+    background-color: #45523e;
+    color: #f5ece5;
+    padding: 10px 20px;
+    font-size: 40px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-bottom: 90px;
+    text-decoration: none;
+}
+
+.buttonAbout:hover {
+    box-shadow: #45523e 4px 4px 10px;
+}
+
+.familyImage {
+    max-height: 500px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0 15px 75px rgb(69, 82, 62, 0.6);
+}
+
+.aboutUs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    margin: 50px 20px 30px 20px;
+    font-size: 30px;
 }
 
 .gallery{
-    width: 80%;
-    margin: 100px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 30px;
+    width: 98%;
+    margin: 40px 20px 80px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .gallery img{
-    width: 100%;
+    transition: ease-in-out 250ms;
+    min-width: 200px;
+    max-width: 13%;
+    height: auto;
     cursor: pointer;
-    border-color: black;
-    border-width: 2px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border-color: #45523e;
+    border-style: solid;
+    border-radius: 4px;
 }
 
 .gallery img:hover{
-    transform: scale(1.05);
+    transform: scale(1.2);
+    border-color: #ad5d50;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: 0 15px 75px rgb(68, 77, 136, 0.2);
+    object-fit: cover;
+}
+
+.full-image{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.full-image img{
+    max-width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    border-radius: 5px;
+    box-shadow: 0 15px 75px rgb(68, 77, 136, 0.2);
+}
+
+.full-image span{
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    font-size: 30px;
+    color: #f5ece5;
+    cursor: pointer;
+}
+
+.universalFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #45523e;
+    color: #f5ece5;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.universalFooter span {
+    margin-left: 10px;
+}
+
+.universalFooter span a {
+    color: #f5ece5;
+    text-decoration: none;
+}
+
+.universalFooter .logoSpan {
+    position: absolute;
+    align-items: right;
+    right: 10px;
+}
+
+.logoSpan img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    transition: ease-in-out 300ms;
+}
+
+.logoSpan img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px rgb(245, 236, 229, 0.2);
 }

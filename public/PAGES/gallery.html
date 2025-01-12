@@ -4,26 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 3</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <nav>
+            <a class="navHereOne">EMIBU</a>
             <a href="home.html">Početak</a>
             <a href="aboutus.html">O nama</a>
+            <a class="navHere">Galerija</a>
         </nav>
         <h1>Galerija</h1>
-        <div class="gallery">
-            <img src="../Images/Ceka1.jpg" alt="Ceka">
-            <img src="../Images/Ceka2.jpg" alt="Ceka">
-            <img src="../Images/BoardGame.jpg" alt="BoardGame">
-            <img src="../Images/BookmarkHP.jpg" alt="Bookmark Harry Potter">
-            <img src="../Images/DuneBookmark.jpg" alt="Bookmark Dune">
-            <img src="../Images/BozicnoSelo.jpg" alt="Bozicno Selo">
-            <img src="../Images/BozicnoSelo1.jpg" alt="Bozicno Selo">
-            <img src="../Images/BozicnoSelo2.jpg" alt="Bozicno Selo">
+        <div class="full-image" id="fullImageContainer">
+            <img src="../Images/Ceka1.jpg" id="FullImage" alt="full image">
+            <span onclick="closeImage()">X</span>
         </div>
+
+        <span>
+            <p>
+                Ovdje možete vidjeti neke od naših radova.
+            </p>
+        </span>
+        
+        <div class="gallery">
+            <img onclick="openImage(this.src)" src="../Images/Ceka1.jpg" alt="Ceka">
+            <img onclick="openImage(this.src)" src="../Images/Ceka2.jpg" alt="Ceka">
+            <img onclick="openImage(this.src)" src="../Images/BoardGame.jpg" alt="BoardGame">
+            <img onclick="openImage(this.src)" src="../Images/BookmarkHP.jpg" alt="Bookmark Harry Potter">
+            <img onclick="openImage(this.src)" src="../Images/DuneBookmark.jpg" alt="Bookmark Dune">
+            <img onclick="openImage(this.src)" src="../Images/BozicnoSelo.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/BozicnoSelo1.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/BozicnoSelo2.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/BozicniStand1.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/Stand1.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/CestitkaBrak.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/CestitkaBrak1.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/Kucica.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/PrivjesakLOTR.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/Med.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/Med1.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/KRiz.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/Kutijica.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/SatCeltic.jpg" alt="Bozicno Selo">
+            <img onclick="openImage(this.src)" src="../Images/SatPenzija.jpg" alt="Bozicno Selo">
+
+        </div>
+        <footer class="universalFooter">
+            <span>Created by: Zvonimir Štaubringer</span>
+            <span class="logoSpan">
+                <a href="https://www.facebook.com/p/EMIBU-100094324327510/" target="_blank">
+                    <img src="../images/facebook.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/emibu_os/" target="_blank">
+                    <img src="../images/Instagram_logo_2016.svg.png" alt="">
+                </a>
+                <a href="https://gitlab.com/Zvonimir.Staubringer" target="_blank">
+                    <img src="../images/png-transparent-gitlab-original-logo-icon-thumbnail.png" alt="">
+                </a>
+            </span>
+        </footer>
     </div>
+
+<script>
+    var fullImageContainer = document.getElementById("fullImageContainer");
+    var fullImage = document.getElementById("FullImage");
+
+    function openImage(image) {
+        fullImageContainer.style.display = "flex";
+        fullImage.src = image;
+    }
+
+    function closeImage() {
+        fullImageContainer.style.display = "none";
+    }
+</script>
 </body>
 </html>
