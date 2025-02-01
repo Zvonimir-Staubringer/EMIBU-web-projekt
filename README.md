@@ -4,4 +4,4 @@ A website for the family business EMIBU, created using resources from their [`fa
 
 This website was created with the purpose of being a project for the OWRiMA course on FERIT. 
 
-The website can be found [here](https://zvonimir-staubringer.github.io/EMIBU-web-projekt/home.html).
+The website can be found [here](zvonimir-staubringer.github.io).

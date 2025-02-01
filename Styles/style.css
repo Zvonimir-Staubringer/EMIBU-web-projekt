@@ -171,18 +171,26 @@ body {
 }
 
 .familyImage {
-    max-height: 500px;
+    max-height: 400px;
+    max-width: 400px;
     margin: 20px;
+    margin-bottom: 50px; 
     border-radius: 50%;
     box-shadow: 0 15px 75px rgb(69, 82, 62, 0.6);
 }
 
 .aboutUs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin: 50px 20px 30px 20px;
     font-size: 30px;
+}
+
+.aboutUs p {
+    font-size: 27px;
 }
 
 .gallery{
